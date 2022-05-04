@@ -2,7 +2,9 @@
 
 ## Use this theme
 
-**[🗺 Open Theme](https://mapcomplete.osm.be/theme.html?userlayout=#TODO)**
+**[🗺 Open Theme](https://mapcomplete.osm.be/theme.html?z=14&lat=52.48004&lon=13.43348&userlayout=https://tordans.github.io/MapComplete-ThemeHelper/OSM-Berlin-Themes/man_made-walter_well-status-checker/theme.json&language=de#)**
+
+[Link to the `theme.json`](https://tordans.github.io/MapComplete-ThemeHelper/OSM-Berlin-Themes/man_made-walter_well-status-checker/theme.json).
 
 ## Goal
 
