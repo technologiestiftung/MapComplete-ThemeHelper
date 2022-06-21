@@ -27,10 +27,7 @@
       },
       "source": {
         "osmTags": {
-          "and": [
-            "man_made=water_well",
-            "network=Berliner Straßenbrunnen"
-          ]
+          "and": ["man_made=water_well", "network=Berliner Straßenbrunnen"]
         }
       },
       "minzoom": 13,
@@ -39,9 +36,7 @@
           "title": {
             "de": "ein Berliner Straßenbrunnen"
           },
-          "tags": [
-            "man_made=water_well"
-          ]
+          "tags": ["man_made=water_well"]
         }
       ],
       "tagRenderings": [
@@ -117,10 +112,7 @@
       ],
       "deletion": {
         "softDeletionTags": {
-          "and": [
-            "razed:man_made:={man_made}",
-            "man_made="
-          ]
+          "and": ["razed:man_made:={man_made}", "man_made="]
         },
         "neededChangesets": 1
       },
@@ -149,10 +141,7 @@
             }
           ],
           "iconSize": "40,40,bottom",
-          "location": [
-            "point",
-            "centroid"
-          ]
+          "location": ["point", "centroid"]
         }
       ],
       "description": {

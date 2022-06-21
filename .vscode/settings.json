@@ -1,18 +1,12 @@
 {
-    "json.schemas": [
-        {
-            "fileMatch": [
-                ".*/layer.json",
-                "!/*/license_info.json"
-            ],
-            "url": "./Schemas/LayerConfigJson.schema.json"
-        },
-        {
-            "fileMatch": [
-                ".*/theme.json",
-                "!/*/license_info.json"
-            ],
-            "url": "./Schemas/LayoutConfigJson.schema.json"
-        },
-    ]
+  "json.schemas": [
+    {
+      "fileMatch": [".*/layer.json", "!/*/license_info.json"],
+      "url": "./Schemas/LayerConfigJson.schema.json"
+    },
+    {
+      "fileMatch": [".*/theme.json", "!/*/license_info.json"],
+      "url": "./Schemas/LayoutConfigJson.schema.json"
+    }
+  ]
 }

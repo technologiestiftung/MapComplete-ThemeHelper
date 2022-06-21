@@ -1,47 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Learn more at https://tailwindcss.com/docs/installation/play-cdn -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>MapComplete Preview</title>
-</head>
-<body class="h-screen">
-  <div class="flex flex-col h-full w-full">
-    <div class="grid gab-5 grid-cols-2">
-      <input class="w-full bg-pink-50" value="" placeholder="Theme URl" id="theme-url" />
-      <input class="w-full bg-pink-50" value="" placeholder="MapComplete URl" id="mapcomplete-url" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Learn more at https://tailwindcss.com/docs/installation/play-cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>MapComplete Preview</title>
+  </head>
+  <body class="h-screen">
+    <div class="flex flex-col h-full w-full">
+      <div class="grid gab-5 grid-cols-2">
+        <input
+          class="w-full bg-pink-50"
+          value=""
+          placeholder="Theme URl"
+          id="theme-url"
+        />
+        <input
+          class="w-full bg-pink-50"
+          value=""
+          placeholder="MapComplete URl"
+          id="mapcomplete-url"
+        />
+      </div>
+      <iframe src="" class="w-full h-full"></iframe>
     </div>
-    <iframe src="" class="w-full h-full"></iframe>
-  </div>
 
-  <script type="module">
-    import base64 from 'https://cdn.skypack.dev/base-64';
+    <script type="module">
+      import base64 from "https://cdn.skypack.dev/base-64";
 
-    window.addEventListener('DOMContentLoaded', (event) => {
-      async function encode() {
-        const urlParams = (new URL(document.location)).searchParams;
-        const themeUrl = urlParams.get('theme')
-        if (!themeUrl) {
-          alert('Please provide your theme URL as ?theme=<URL> param.')
+      window.addEventListener("DOMContentLoaded", (event) => {
+        async function encode() {
+          const urlParams = new URL(document.location).searchParams;
+          const themeUrl = urlParams.get("theme");
+          if (!themeUrl) {
+            alert("Please provide your theme URL as ?theme=<URL> param.");
+          }
+          const response = await fetch(themeUrl);
+          const json = await response.text();
+
+          // We cannot use this native btoa() approach, because that will break German characters form the JSON
+          // const _encodedJson = btoa(unescape(encodeURIComponent(json)));
+          const encodedJson = base64.encode(json);
+
+          const url = `https://mapcomplete.osm.be/theme?userlayout=true#${encodedJson}`;
+          document.querySelector("iframe").src = url;
+          document.querySelector("#theme-url").value = themeUrl;
+          document.querySelector("#mapcomplete-url").value = url;
+
+          console.log({ json, encodedJson, url });
         }
-        const response = await fetch(themeUrl);
-        const json = await response.text();
-
-        // We cannot use this native btoa() approach, because that will break German characters form the JSON
-        // const _encodedJson = btoa(unescape(encodeURIComponent(json)));
-        const encodedJson = base64.encode(json);
-
-        const url =  `https://mapcomplete.osm.be/theme?userlayout=true#${encodedJson}`
-        document.querySelector("iframe").src = url;
-        document.querySelector("#theme-url").value = themeUrl;
-        document.querySelector("#mapcomplete-url").value = url;
-
-        console.log({json, encodedJson, url});
-      }
-      encode();
-    });
-  </script>
-</body>
+        encode();
+      });
+    </script>
+  </body>
 </html>

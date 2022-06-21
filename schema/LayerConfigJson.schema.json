@@ -36,9 +36,7 @@
                   "type": "number"
                 }
               },
-              "required": [
-                "osmTags"
-              ]
+              "required": ["osmTags"]
             },
             {
               "type": "object",
@@ -71,9 +69,7 @@
                   "type": "number"
                 }
               },
-              "required": [
-                "osmTags"
-              ]
+              "required": ["osmTags"]
             },
             {
               "type": "object",
@@ -99,9 +95,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "geoJson"
-              ]
+              "required": ["geoJson"]
             }
           ]
         }
@@ -170,9 +164,7 @@
           "items": [
             {
               "type": "string",
-              "enum": [
-                "defaults"
-              ]
+              "enum": ["defaults"]
             }
           ],
           "minItems": 1,
@@ -273,23 +265,16 @@
                     "type": "number"
                   }
                 },
-                "required": [
-                  "preferredBackground"
-                ]
+                "required": ["preferredBackground"]
               },
               {
-                "enum": [
-                  true
-                ],
+                "enum": [true],
                 "type": "boolean"
               }
             ]
           }
         },
-        "required": [
-          "tags",
-          "title"
-        ]
+        "required": ["tags", "title"]
       }
     },
     "tagRenderings": {
@@ -308,10 +293,7 @@
               },
               "override": {}
             },
-            "required": [
-              "builtin",
-              "override"
-            ]
+            "required": ["builtin", "override"]
           },
           {
             "$ref": "#/definitions/default<(string|QuestionableTagRenderingConfigJson|{builtin:string;override:any;})[]>"
@@ -338,9 +320,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "sameAs"
-          ]
+          "required": ["sameAs"]
         }
       ]
     },
@@ -379,20 +359,11 @@
     },
     "syncSelection": {
       "description": "If set, synchronizes wether or not this layer is selected.\n\nno: Do not sync at all, always revert to default\nlocal: keep selection on local storage\ntheme-only: sync via OSM, but this layer will only be toggled in this theme\nglobal: all layers with this ID will be synced accross all themes",
-      "enum": [
-        "global",
-        "local",
-        "no",
-        "theme-only"
-      ],
+      "enum": ["global", "local", "no", "theme-only"],
       "type": "string"
     }
   },
-  "required": [
-    "id",
-    "mapRendering",
-    "source"
-  ],
+  "required": ["id", "mapRendering", "source"],
   "definitions": {
     "AndOrTagConfigJson": {
       "type": "object",
@@ -459,9 +430,7 @@
           "type": "boolean"
         }
       },
-      "required": [
-        "canonicalDenomination"
-      ],
+      "required": ["canonicalDenomination"],
       "additionalProperties": false
     },
     "TagRenderingConfigJson": {
@@ -506,9 +475,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "key"
-          ]
+          "required": ["key"]
         },
         "mappings": {
           "description": "Allows fixed-tag inputs, shown either as radiobuttons or as checkboxes",
@@ -545,10 +512,7 @@
                         "type": "string"
                       }
                     },
-                    "required": [
-                      "class",
-                      "path"
-                    ]
+                    "required": ["class", "path"]
                   },
                   {
                     "type": "string"
@@ -556,10 +520,7 @@
                 ]
               }
             },
-            "required": [
-              "if",
-              "then"
-            ]
+            "required": ["if", "then"]
           }
         }
       },
@@ -619,10 +580,7 @@
                 ]
               }
             },
-            "required": [
-              "if",
-              "then"
-            ]
+            "required": ["if", "then"]
           }
         },
         "iconSize": {
@@ -659,9 +617,7 @@
           ]
         }
       },
-      "required": [
-        "location"
-      ],
+      "required": ["location"],
       "additionalProperties": false
     },
     "default_5": {
@@ -686,10 +642,7 @@
               "$ref": "#/definitions/TagRenderingConfigJson"
             },
             {
-              "type": [
-                "string",
-                "number"
-              ]
+              "type": ["string", "number"]
             }
           ]
         },
@@ -722,10 +675,7 @@
               "$ref": "#/definitions/TagRenderingConfigJson"
             },
             {
-              "enum": [
-                "no",
-                "yes"
-              ],
+              "enum": ["no", "yes"],
               "type": "string"
             }
           ]
@@ -776,10 +726,7 @@
               }
             }
           },
-          "required": [
-            "into",
-            "sourceString"
-          ]
+          "required": ["into", "sourceString"]
         },
         "renderings": {
           "anyOf": [
@@ -804,10 +751,7 @@
           ]
         }
       },
-      "required": [
-        "renderings",
-        "rewrite"
-      ],
+      "required": ["renderings", "rewrite"],
       "additionalProperties": false
     },
     "QuestionableTagRenderingConfigJson": {
@@ -852,9 +796,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "key"
-          ]
+          "required": ["key"]
         },
         "multiAnswer": {
           "description": "If true, use checkboxes instead of radio buttons when asking the question",
@@ -894,10 +836,7 @@
                         "type": "string"
                       }
                     },
-                    "required": [
-                      "class",
-                      "path"
-                    ]
+                    "required": ["class", "path"]
                   },
                   {
                     "type": "string"
@@ -911,10 +850,7 @@
                     "$ref": "#/definitions/AndOrTagConfigJson"
                   },
                   {
-                    "type": [
-                      "string",
-                      "boolean"
-                    ]
+                    "type": ["string", "boolean"]
                   }
                 ]
               },
@@ -937,10 +873,7 @@
                 }
               }
             },
-            "required": [
-              "if",
-              "then"
-            ]
+            "required": ["if", "then"]
           }
         },
         "id": {
@@ -996,10 +929,7 @@
               }
             }
           },
-          "required": [
-            "into",
-            "sourceString"
-          ]
+          "required": ["into", "sourceString"]
         },
         "renderings": {
           "type": "array",
@@ -1016,10 +946,7 @@
                   },
                   "override": {}
                 },
-                "required": [
-                  "builtin",
-                  "override"
-                ]
+                "required": ["builtin", "override"]
               },
               {
                 "type": "string"
@@ -1028,10 +955,7 @@
           }
         }
       },
-      "required": [
-        "renderings",
-        "rewrite"
-      ],
+      "required": ["renderings", "rewrite"],
       "additionalProperties": false
     },
     "default_1": {
@@ -1074,22 +998,15 @@
                       "type": "string"
                     }
                   },
-                  "required": [
-                    "name"
-                  ]
+                  "required": ["name"]
                 }
               }
             },
-            "required": [
-              "question"
-            ]
+            "required": ["question"]
           }
         }
       },
-      "required": [
-        "id",
-        "options"
-      ],
+      "required": ["id", "options"],
       "additionalProperties": false
     },
     "DeleteConfigJson": {
@@ -1109,10 +1026,7 @@
                 "type": "string"
               }
             },
-            "required": [
-              "changesetMessage",
-              "explanation"
-            ]
+            "required": ["changesetMessage", "explanation"]
           }
         },
         "nonDeleteMappings": {
@@ -1126,10 +1040,7 @@
               },
               "then": {}
             },
-            "required": [
-              "if",
-              "then"
-            ]
+            "required": ["if", "then"]
           }
         },
         "softDeletionTags": {
@@ -1186,10 +1097,7 @@
           }
         }
       },
-      "required": [
-        "applicableUnits",
-        "appliesToKey"
-      ],
+      "required": ["applicableUnits", "appliesToKey"],
       "additionalProperties": false
     }
   },
