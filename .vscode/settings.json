@@ -2,23 +2,17 @@
     "json.schemas": [
         {
             "fileMatch": [
-                "/assets/layers/*/*.json",
-                "!/assets/layers/*/license_info.json"
+                ".*/layer.json",
+                "!/*/license_info.json"
             ],
-            "url": "./Docs/Schemas/LayerConfigJson.schema.json"
+            "url": "./Schemas/LayerConfigJson.schema.json"
         },
         {
             "fileMatch": [
-                "/assets/themes/*/*.json",
-                "!/assets/themes/*/license_info.json"
+                ".*/theme.json",
+                "!/*/license_info.json"
             ],
-            "url": "./Docs/Schemas/LayoutConfigJson.schema.json"
+            "url": "./Schemas/LayoutConfigJson.schema.json"
         },
-        {
-            "fileMatch": [
-                "/wip/*.json",
-            ],
-            "url": "./Docs/Schemas/LayoutConfigJson.schema.json"
-        }
     ]
 }
