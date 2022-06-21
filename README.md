@@ -12,4 +12,6 @@ b. Host Themes by the OSM Berlin Community that are not relevant for the broader
 
 ## OSM Berlin Themes
 
-[See `./OSM-Berlin-Themes`](./OSM-Berlin-Themes) for a list of themes. They have their own readme files.
+Custom themes are at [`./OSM-Berlin-Themes`](./OSM-Berlin-Themes) for a list of themes. They have their own readme files.
+
+- ["Straßenbrunnen"](https://mapcomplete.osm.be/theme?userlayout=https://tordans.github.io/MapComplete-ThemeHelper/OSM-Berlin-Themes/man_made-walter_well-status-checker/theme.json)
