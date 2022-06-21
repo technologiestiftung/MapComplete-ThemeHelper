@@ -4,7 +4,7 @@
     "de": "Berliner Pumpen"
   },
   "description": {
-    "de": "Die Karte zeigt die Funktionsfähigkeit und Position der Berliner Straßenbrunnen."
+    "de": "Die Karte zeigt die Funktionsfähigkeit und Position der Berliner Straßenbrunnen.<br /><ul><li>Die Icons zeigen den Typ des Brunnen im Scherenschnitt.<li>Das Zusatz-Icon zeigt den Funktionsstatus (Funktionstüchtig, Defekt, Abgeschlossen, Unbekannt)<li>Der Text zeigt das Datum der letzten Funktionsprüfung bzw. den Hinweis, wenn diese durchgeführt werden sollte.</ul>"
   },
   "maintainer": "MapComplete",
   "icon": "./assets/themes/drinking_water/logo.svg",
