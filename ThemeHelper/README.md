@@ -12,6 +12,6 @@ Keep in mind that the json file might be cached, depedning on where you pull it 
 
 **How to start it:**
 
-1. Open this folder locally
+1. Open the root folder locally
 1. Run `npx serve ./` from within the folder
-1. Open the web page and provide the URL to your theme as `?theme=<URL>` param.
+1. Open the web page and provide the URL to your theme as `/ThemeHelper/?theme=<URL>` param.

@@ -26,8 +26,12 @@
 
     window.addEventListener('DOMContentLoaded', (event) => {
       async function encode() {
-        const themeFilename = 'my-theme.json'
-        const response = await fetch(themeFilename);
+        const urlParams = (new URL(document.location)).searchParams;
+        const themeUrl = urlParams.get('theme')
+        if (!themeUrl) {
+          alert('Please provide your theme URL as ?theme=<URL> param.')
+        }
+        const response = await fetch(themeUrl);
         const json = await response.text();
 
         // We cannot use this native btoa() approach, because that will break German characters form the JSON
@@ -36,7 +40,7 @@
 
         const url =  `https://mapcomplete.osm.be/theme?userlayout=true#${encodedJson}`
         //document.querySelector("iframe").src = url;
-        document.querySelector("#theme-url").value = `${window.location.href}${themeFilename}`;
+        document.querySelector("#theme-url").value = themeUrl;
         document.querySelector("#mapcomplete-url").value = url;
 
         console.log({json, encodedJson, url});
