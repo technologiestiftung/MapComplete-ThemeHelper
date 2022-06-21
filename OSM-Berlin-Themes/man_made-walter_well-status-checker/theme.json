@@ -55,13 +55,13 @@
             {
               "if": "pump:status=ok",
               "then": {
-                "de": "Dieser Straßenbrunnen funktioniert (20x pumpen produziert Wasser)"
+                "de": "Dieser Straßenbrunnen funktioniert (30x pumpen produziert Wasser)"
               }
             },
             {
               "if": "pump:status=broken",
               "then": {
-                "de": "Auch nach längerem Pumpen (20x-30x) fließt kein Wasser oder die Pumpe ist aus anderen, nicht weiter ausgeführten Gründen dauerhaft nicht funktionsfähig."
+                "de": "Auch nach längerem Pumpen (30x) fließt kein Wasser oder die Pumpe ist aus anderen, nicht weiter ausgeführten Gründen dauerhaft nicht funktionsfähig."
               }
             },
             {
@@ -104,7 +104,7 @@
           "mappings": [
             {
               "if": "check_date:={_now:date}",
-              "then": "Surveyed today!"
+              "then": "heute"
             }
           ],
           "id": "bench-check_date"
@@ -124,7 +124,8 @@
       "mapRendering": [
         {
           "icon": {
-            "render": "pin:#6BC4F7;./assets/layers/drinking_water/drips.svg"
+            "#_render": "pin:#6BC4F7;http://localhost:56567/OSM-Berlin-Themes/man_made-walter_well-status-checker/icons/pumpe_{pump:style}.png",
+            "render": "pin:#6BC4F7;https://tordans.github.io/MapComplete-ThemeHelper/OSM-Berlin-Themes/man_made-walter_well-status-checker/icons/pumpe_{pump:style}.png"
           },
           "iconBadges": [
             {
@@ -132,14 +133,46 @@
                 "or": [
                   "pump:status=broken",
                   "pump:status=missing_beam",
-                  "pump:status=out_of_order",
-                  "pump:status=locked",
-                  "pump:status=blocked"
+                  "pump:status=out_of_order"
                 ]
               },
               "then": "close:#c33"
+            },
+            {
+              "if": {
+                "or": ["pump:status=locked", "pump:status=blocked"]
+              },
+              "then": "https://tordans.github.io/MapComplete-ThemeHelper/OSM-Berlin-Themes/man_made-walter_well-status-checker/icons/lock.svg"
+            },
+            {
+              "if": {
+                "or": ["pump:status=ok"]
+              },
+              "then": "checkmark:#00a327"
+            },
+            {
+              "if": {
+                "or": ["pump:status="]
+              },
+              "then": "https://tordans.github.io/MapComplete-ThemeHelper/OSM-Berlin-Themes/man_made-walter_well-status-checker/icons/questionmark.svg"
             }
           ],
+          "label": {
+            "mappings": [
+              {
+                "if": "check_date>2022-01-01",
+                "then": "<div style='color: white; background: #6BC4F7; padding: 1px 5px; font-size: 75%; border-radius: 3px; white-space: nowrap;'>{check_date}</div>"
+              },
+              {
+                "if": "check_date<2022-01-01",
+                "then": "<div style='color: white; background: #c33; padding: 1px 5px; font-size: 60%; border-radius: 3px; white-space: nowrap;' title='Zuletzt geprüft: {check_date}'>Bitte prüfen</div>"
+              },
+              {
+                "if": "check_date=",
+                "then": "<div style='color: white; background: #c33; padding: 1px 5px; font-size: 60%; border-radius: 3px; white-space: nowrap;' title='Zuletzt geprüft: Kein Datum angegeben'>Bitte prüfen</div>"
+              }
+            ]
+          },
           "iconSize": "40,40,bottom",
           "location": ["point", "centroid"]
         }
