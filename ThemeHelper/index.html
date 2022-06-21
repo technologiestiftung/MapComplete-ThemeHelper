@@ -13,12 +13,7 @@
       <input class="w-full bg-pink-50" value="" placeholder="Theme URl" id="theme-url" />
       <input class="w-full bg-pink-50" value="" placeholder="MapComplete URl" id="mapcomplete-url" />
     </div>
-    <div class="flex flex-row">
-      <div id="jsoneditor" class="w-1/3"></div>
-      <div class="flex-grow border-t border-pink-400">
-        <iframe src="" class="col-span-2 w-full h-full"></iframe>
-      </div>
-    </div>
+    <iframe src="" class="w-full h-full"></iframe>
   </div>
 
   <script type="module">
@@ -35,11 +30,11 @@
         const json = await response.text();
 
         // We cannot use this native btoa() approach, because that will break German characters form the JSON
-        //const encodedJson = btoa(unescape(encodeURIComponent(json)));
+        // const _encodedJson = btoa(unescape(encodeURIComponent(json)));
         const encodedJson = base64.encode(json);
 
         const url =  `https://mapcomplete.osm.be/theme?userlayout=true#${encodedJson}`
-        //document.querySelector("iframe").src = url;
+        document.querySelector("iframe").src = url;
         document.querySelector("#theme-url").value = themeUrl;
         document.querySelector("#mapcomplete-url").value = url;
 
