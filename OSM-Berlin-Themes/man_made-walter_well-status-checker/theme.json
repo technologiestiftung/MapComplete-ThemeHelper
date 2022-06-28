@@ -4,7 +4,7 @@
     "de": "Berliner Pumpen"
   },
   "description": {
-    "de": "Die Karte zeigt die Funktionsfähigkeit und Position der Berliner Straßenbrunnen.<br /><ul><li>Die Icons zeigen den Typ des Brunnen im Scherenschnitt.<li>Das Zusatz-Icon zeigt den Funktionsstatus (Funktionstüchtig, Defekt, Abgeschlossen, Unbekannt)<li>Der Text zeigt das Datum der letzten Funktionsprüfung bzw. den Hinweis, wenn diese durchgeführt werden sollte.</ul>"
+    "de": "Die Karte zeigt die Funktionsfähigkeit und Position der Berliner Straßenbrunnen.<br />Feedback gerne an <a href="mailto:alex@osm-berlin.de">alex@osm-berlin.de</a>.<br /><ul><li>Die Icons zeigen den Typ des Brunnen im Scherenschnitt.<li>Das Zusatz-Icon zeigt den Funktionsstatus (Funktionstüchtig, Defekt, Abgeschlossen, Unbekannt)<li>Der Text zeigt das Datum der letzten Funktionsprüfung bzw. den Hinweis, wenn diese durchgeführt werden sollte.</ul>"
   },
   "maintainer": "MapComplete",
   "icon": "./assets/themes/drinking_water/logo.svg",
@@ -160,11 +160,11 @@
           "label": {
             "mappings": [
               {
-                "if": "check_date>2022-01-01",
+                "if": "check_date>2021-01-01",
                 "then": "<div style='color: white; background: #6BC4F7; padding: 1px 5px; font-size: 75%; border-radius: 3px; white-space: nowrap;'>{check_date}</div>"
               },
               {
-                "if": "check_date<2022-01-01",
+                "if": "check_date<2021-01-01",
                 "then": "<div style='color: white; background: #c33; padding: 1px 5px; font-size: 60%; border-radius: 3px; white-space: nowrap;' title='Zuletzt geprüft: {check_date}'>Bitte prüfen</div>"
               },
               {
