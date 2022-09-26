@@ -13,5 +13,7 @@ wget -O LayerConfigJson.schema.json \
 wget -O LayerConfigJsonJSC.ts \
   https://raw.githubusercontent.com/pietervdvn/MapComplete/develop/Docs/Schemas/LayerConfigJsonJSC.ts
 
+npx prettier "./" --write
+
 echo $(date +'%Y-%m-%d') > last-updated-at.log
 ```
