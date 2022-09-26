@@ -2,11 +2,11 @@
   "json.schemas": [
     {
       "fileMatch": [".*/layer.json", "!/*/license_info.json"],
-      "url": "./Schemas/LayerConfigJson.schema.json"
+      "url": "./schema/LayerConfigJson.schema.json"
     },
     {
       "fileMatch": [".*/theme.json", "!/*/license_info.json"],
-      "url": "./Schemas/LayoutConfigJson.schema.json"
+      "url": "./schema/LayoutConfigJson.schema.json"
     }
   ]
 }
