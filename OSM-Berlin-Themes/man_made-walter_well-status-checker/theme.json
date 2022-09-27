@@ -112,11 +112,12 @@
           "id": "bench-check_date"
         }
       ],
+      "//DESC_deletion": "`softDeletion` is only triggered if regular deletion is prohibited for one of multiple reasons. Setting the `neededChangesets` creates an artificial reason to trigger soft delete.",
       "deletion": {
         "softDeletionTags": {
           "and": ["razed:man_made:={man_made}", "man_made="]
         },
-        "neededChangesets": 1
+        "neededChangesets": 999999
       },
       "allowMove": {
         "enableRelocation": false,
