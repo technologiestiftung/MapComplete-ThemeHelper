@@ -14,6 +14,7 @@
   "startLon": 4.351697,
   "startZoom": 16,
   "widenFactor": 2,
+  "enableAddNewPoints": false,
   "layers": [
     {
       "id": "berlin_emergency_water_pump_layer",
@@ -31,7 +32,8 @@
         }
       },
       "minzoom": 13,
-      "presets": [
+      "//DESC_presets": "Presets specify what users are allowed to add; this is overwritten by `enableAddNewPoints`. However, since I am not totally sure about this, lets just disable them here.",
+      "//presets": [
         {
           "title": {
             "de": "ein Berliner Straßenbrunnen"
@@ -116,7 +118,6 @@
         },
         "neededChangesets": 1
       },
-      "enableAddNewPoints": false,
       "allowMove": {
         "enableRelocation": false,
         "enableImproveAccuraccy": true
