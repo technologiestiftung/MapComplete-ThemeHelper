@@ -8,6 +8,8 @@
     "en:": "This map shows the location and operational state of berlin water wells (pumps).<br /> Please sende feedback to <a href='mailto:alex@osm-berlin.de'>alex@osm-berlin.de</a>. You can use this map to update the operational state of each pump and add/update a check date.",
     "de": "Die Karte zeigt die Funktionsfähigkeit und Position der Berliner Straßenbrunnen.<br />Feedback gerne an <a href='mailto:alex@osm-berlin.de'>alex@osm-berlin.de</a>.<br /><ul><li>Die Icons zeigen den Typ des Brunnen im Scherenschnitt.<li>Das Zusatz-Icon zeigt den Funktionsstatus (Funktionstüchtig, Defekt, Abgeschlossen, Unbekannt)<li>Der Text zeigt das Datum der letzten Funktionsprüfung bzw. den Hinweis, wenn diese durchgeführt werden sollte.</ul>"
   },
+  "mustHaveLanguage": ["de"],
+  "language": ["en", "de"],
   "maintainer": "MapComplete",
   "icon": "./assets/themes/drinking_water/logo.svg",
   "version": "0",
