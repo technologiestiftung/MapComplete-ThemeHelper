@@ -1,9 +1,11 @@
 {
   "id": "berlin_emergency_water_pumps",
   "title": {
+    "en": "Berlin Water Wells",
     "de": "Berliner Pumpen"
   },
   "description": {
+    "en:": "This map shows the location and operational state of berlin water wells (pumps).<br /> Please sende feedback to <a href='mailto:alex@osm-berlin.de'>alex@osm-berlin.de</a>. You can use this map to update the operational state of each pump and add/update a check date.",
     "de": "Die Karte zeigt die Funktionsfähigkeit und Position der Berliner Straßenbrunnen.<br />Feedback gerne an <a href='mailto:alex@osm-berlin.de'>alex@osm-berlin.de</a>.<br /><ul><li>Die Icons zeigen den Typ des Brunnen im Scherenschnitt.<li>Das Zusatz-Icon zeigt den Funktionsstatus (Funktionstüchtig, Defekt, Abgeschlossen, Unbekannt)<li>Der Text zeigt das Datum der letzten Funktionsprüfung bzw. den Hinweis, wenn diese durchgeführt werden sollte.</ul>"
   },
   "maintainer": "MapComplete",
@@ -19,10 +21,12 @@
     {
       "id": "berlin_emergency_water_pump_layer",
       "name": {
+        "en": "Berlin Water Wells",
         "de": "Berliner Straßenbrunnen"
       },
       "title": {
         "render": {
+          "en": "Berlin Water Wells",
           "de": "Berliner Straßenbrunnen"
         }
       },
@@ -36,6 +40,7 @@
       "//presets": [
         {
           "title": {
+            "en": "a Berlin Water Well",
             "de": "ein Berliner Straßenbrunnen"
           },
           "tags": ["man_made=water_well"]
@@ -45,9 +50,11 @@
         "images",
         {
           "question": {
+            "en": "Does this water well work?",
             "de": "Ist dieser Straßenbrunnen funktionsfähig?"
           },
           "render": {
+            "en": "Status <i>{pump:status}</i>",
             "de": "Status <i>{pump:status}</i>"
           },
           "freeform": {
@@ -57,36 +64,42 @@
             {
               "if": "pump:status=ok",
               "then": {
+                "en": "This Berlin water well is functional (water after 30x pumping)",
                 "de": "Dieser Straßenbrunnen funktioniert (30x pumpen produziert Wasser)"
               }
             },
             {
               "if": "pump:status=broken",
               "then": {
+                "en": "No water, even when pumped about 30x – or other reasons why that well is not operational.",
                 "de": "Auch nach längerem Pumpen (30x) fließt kein Wasser oder die Pumpe ist aus anderen, nicht weiter ausgeführten Gründen dauerhaft nicht funktionsfähig."
               }
             },
             {
               "if": "pump:status=missing_beam",
               "then": {
+                "en": "The part that is used to pump water is missing.",
                 "de": "Es fehlt der Handschwengel zum pumpen; die Pumpe kann daher nicht betätigt werden."
               }
             },
             {
               "if": "pump:status=out_of_order",
               "then": {
+                "en": "This pump was disabled by an official entity.",
                 "de": "Die Pumpe wurde (z.B. von einer Behörde bzw. der Senatsverwaltung) außer Betrieb gesetzt."
               }
             },
             {
               "if": "pump:status=locked",
               "then": {
+                "en": "The pump is rendered unusable with something like a metal chain.",
                 "de": "Die Pumpe ist z.B. mit einer Kette verschlossen."
               }
             },
             {
               "if": "pump:status=blocked",
               "then": {
+                "en": "Access to this pump is blocked long term (eg. construction side).",
                 "de": "Der Zugang zur Pumpe ist blockiert (z.B. durch eine Baustelle)."
               }
             }
@@ -94,9 +107,11 @@
         },
         {
           "question": {
+            "en": "When was the last time this pump was checked?",
             "de": "Wann wurde die Funktionsfähigkeit dieser Pumpe zuletzt überprüft?"
           },
           "render": {
+            "en": "This pump was checked last at {check_date}",
             "de": "Die Funktionsfähigkeit wurde zuletzt geprüft am {check_date}"
           },
           "freeform": {
@@ -180,6 +195,7 @@
         }
       ],
       "description": {
+        "en": "Berliner walter well layer (emergency pumps)",
         "de": "Berliner Straßenbrunnen Layer"
       }
     }
