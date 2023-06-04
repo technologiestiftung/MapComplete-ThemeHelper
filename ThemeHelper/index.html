@@ -27,7 +27,7 @@
     </div>
 
     <script type="module">
-      import base64 from "https://cdn.skypack.dev/base-64";
+      import lzString from "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/+esm";
 
       window.addEventListener("DOMContentLoaded", (event) => {
         async function encode() {
@@ -41,7 +41,7 @@
 
           // We cannot use this native btoa() approach, because that will break German characters form the JSON
           // const _encodedJson = btoa(unescape(encodeURIComponent(json)));
-          const encodedJson = base64.encode(json);
+          const encodedJson = lzString.compressToBase64(json);
 
           const url = `https://mapcomplete.osm.be/theme?userlayout=true#${encodedJson}`;
           document.querySelector("iframe").src = url;
