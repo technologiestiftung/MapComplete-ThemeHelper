@@ -179,15 +179,27 @@
           "label": {
             "mappings": [
               {
-                "if": "check_date>2021-01-01",
+                "if": {
+                  "and": ["pump:status!=", "check_date>2021-01-01"]
+                },
                 "then": "<div style='color: white; background: #6BC4F7; padding: 1px 5px; font-size: 75%; border-radius: 3px; white-space: nowrap;'>{check_date}</div>"
               },
               {
-                "if": "check_date<2021-01-01",
+                "if": {
+                  "and": ["pump:status!=", "check_date<2021-01-01"]
+                },
                 "then": "<div style='color: white; background: #c33; padding: 1px 5px; font-size: 60%; border-radius: 3px; white-space: nowrap;' title='Zuletzt geprüft: {check_date}'>Bitte prüfen</div>"
               },
               {
-                "if": "check_date=",
+                "if": {
+                  "or": ["pump:status=", "check_date!="]
+                },
+                "then": "<div style='color: white; background: #cc6533; padding: 1px 5px; font-size: 60%; border-radius: 3px; white-space: nowrap;' title='Pumpen-Existenz geprüft aber nicht Pumpen-Status'>Bitte prüfen</div>"
+              },
+              {
+                "if": {
+                  "or": ["pump:status=", "check_date="]
+                },
                 "then": "<div style='color: white; background: #c33; padding: 1px 5px; font-size: 60%; border-radius: 3px; white-space: nowrap;' title='Zuletzt geprüft: Kein Datum angegeben'>Bitte prüfen</div>"
               }
             ]
