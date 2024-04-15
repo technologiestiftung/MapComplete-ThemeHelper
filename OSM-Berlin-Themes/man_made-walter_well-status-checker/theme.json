@@ -14,7 +14,7 @@
   "icon": "./assets/themes/drinking_water/logo.svg",
   "version": "0",
   "startLat": 50.8465573,
-  "defaultBackgroundId": "CartoDB.Voyager",
+  "defaultBackgroundId": "maptiler",
   "startLon": 4.351697,
   "startZoom": 16,
   "widenFactor": 2,
