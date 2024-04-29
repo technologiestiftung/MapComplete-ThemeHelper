@@ -2,9 +2,11 @@
 
 ## Use this theme
 
-**[🗺 Open Theme](https://mapcomplete.osm.be/theme.html?z=14&lat=52.48004&lon=13.43348&userlayout=https://tordans.github.io/MapComplete-ThemeHelper/OSM-Berlin-Themes/man_made-walter_well-status-checker/theme.json&language=de#)**
+> [!INFO]
+> Update 2024-04: MapComplete introduced a theme builder and changed the data structure to create themes.
+> The old theme does not work anymore, but there is a new theme now, that can be updated by @tordans via "MapComplete Studio".
 
-[Link to the `theme.json`](https://tordans.github.io/MapComplete-ThemeHelper/OSM-Berlin-Themes/man_made-walter_well-status-checker/theme.json).
+**[🗺 Open Theme](https://mapcomplete.org/theme.html?lat=52.47271334046087&lon=13.445970188175806&userlayout=https%3A%2F%2Fstudio.mapcomplete.org%2F11881%2Fthemes%2Fberlin_emergency_water_pumps%2Fberlin_emergency_water_pumps.json)**
 
 ## Goal
 
